@@ -101,7 +101,7 @@ Conditionals
    Conditionals/CondSummary.rst
    Conditionals/CondPractice.rst
    Conditionals/CondParsonsPractice.rst
-   
+
 Magpie Chatbot Lab
 ::::::::::::::::::::
 
@@ -161,7 +161,7 @@ Arrays
    ArrayBasics/numberCubeB.rst
    ArrayBasics/aSummary.rst
    ArrayBasics/ArrayPractice.rst
-   
+
 List and ArrayList
 ::::::::::::::::::::
 
@@ -265,6 +265,12 @@ Searching and Sorting
    SearchSort/mergeSort.rst
    SearchSort/ssEasyMC.rst
 
+Images (Beta)
+::::::::::::::::::::::::::::::
+.. toctree::
+   :maxdepth: 2
+
+   Images/imageBasics.rst
 
 Preparing for the Exam
 :::::::::::::::::::::::::::::::::
