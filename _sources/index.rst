@@ -272,6 +272,13 @@ Images (Beta)
 
    Images/imageBasics.rst
 
+Turtles (Beta)
+::::::::::::::::::::::::::::::
+.. toctree::
+  :maxdepth: 2
+
+  Turtles/turtleBasics.rst
+
 Preparing for the Exam
 :::::::::::::::::::::::::::::::::
 
