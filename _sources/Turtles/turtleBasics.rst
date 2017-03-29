@@ -2942,6 +2942,6 @@ Try clicking the |runbutton| button below to see what the following program does
           timmy.forward(100);
           timmy.turnLeft();
           timmy.forward(75);
-          world.show(true);
+          world.show(true); //delete true for no GIF
       }
     }
