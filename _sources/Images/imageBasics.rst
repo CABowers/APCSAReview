@@ -65,7 +65,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
    .. raw:: html
 
-      <pre class="javaClasses">
+      <pre class="javaFiles" id="filesIWant">
 
         import java.awt.Image;
         import java.awt.image.BufferedImage;
@@ -900,12 +900,13 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
            if(!file.exists()) {
                this.createImageFromText(fileName.substring(0,fileName.lastIndexOf('.')) + ".txt");
            } else {
+               System.out.println("yay");
                if (!file.canRead())
                {
                  throw new IOException(this.fileName +
                                      " could not be opened. Check that you specified the path");
                }
-               bufferedImage = ImageIO.read(file);
+               this.bufferedImage = ImageIO.read(file);
            }
 
          }
@@ -1202,6 +1203,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
 .. activecode:: Picture
     :language: java
+    :datafile: filesIWant, SimplePicture.java, arch
 
     import java.awt.*;
     import java.awt.font.*;

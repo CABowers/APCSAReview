@@ -50,7 +50,7 @@ Try clicking the |runbutton| button below to see what the following program does
 
    .. raw:: html
 
-      <pre class="javaClasses">
+      <pre id="turtleClasses" class="javaFiles">
       import java.awt.Image;
       import java.awt.image.BufferedImage;
 
@@ -2929,6 +2929,7 @@ Try clicking the |runbutton| button below to see what the following program does
 
 .. activecode:: TurtleTest
     :language: java
+    :datafile: turtleClasses
 
     import java.util.*;
 
