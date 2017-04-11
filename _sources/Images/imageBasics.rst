@@ -46,7 +46,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
 .. raw:: html
 
-    <canvas id="arch" class="images"  width="180" height="240" style="display: block; margin: 0 auto;">
+    <canvas id="arch" class="image"  width="180" height="240" style="display: block; margin: 0 auto;">
     </canvas>
     <script>
     var context = document.getElementById("arch").getContext("2d");
@@ -57,6 +57,16 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
     img.src = "../_static/arch.jpg";
 
     </script>
+
+
+.. datafile:: MathFunctions.java
+   :hide:
+
+   public class MathFunctions {
+       public static boolean greaterThan(int x, int y) {
+           return x > y;
+       }
+   }
 
 
 .. reveal:: JavaClasses
@@ -476,7 +486,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
    .. raw:: html
 
-      <pre id="SimplePicture.java" class="javaFile">
+      <pre id="SimplePicture.java">
         import javax.imageio.ImageIO;
         import java.awt.image.BufferedImage;
         import javax.swing.ImageIcon;
@@ -900,7 +910,6 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
            if(!file.exists()) {
                this.createImageFromText(fileName.substring(0,fileName.lastIndexOf('.')) + ".txt");
            } else {
-               System.out.println("yay");
                if (!file.canRead())
                {
                  throw new IOException(this.fileName +
@@ -1203,7 +1212,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
 .. activecode:: Picture
     :language: java
-    :datafile: filesIWant, SimplePicture.java, arch
+    :datafile: filesIWant, SimplePicture.java, arch, MathFunctions.java
 
     import java.awt.*;
     import java.awt.font.*;
@@ -1488,6 +1497,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
        */
       public static void main(String[] args)
       {
+        System.out.println(MathFunctions.greaterThan(3,2));
         Picture arch = new Picture("arch.jpg");
         arch.show();
         arch.switchColors();
