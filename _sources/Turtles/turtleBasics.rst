@@ -1393,40 +1393,17 @@ Try clicking the |runbutton| button below to see what the following program does
            title = fileName;
 
          File file = new File(this.fileName);
-         if(!file.exists()) {
-             this.createImageFromText(fileName.substring(0,fileName.lastIndexOf('.')) + ".txt");
-         } else {
-             if (!file.canRead())
-             {
-               throw new IOException(this.fileName +
-                                   " could not be opened. Check that you specified the path");
-             }
-             bufferedImage = ImageIO.read(file);
+
+         if (!file.canRead())
+         {
+           throw new IOException(this.fileName +
+                               " could not be opened. Check that you specified the path");
          }
+         bufferedImage = ImageIO.read(file);
+
 
        }
 
-      /**
-       * Creates a image file from a text file
-       * @param  String name of text file
-       */
-       public void createImageFromText(String name) {
-           try {
-               File file = new File(name);
-               Scanner s = new Scanner(file);
-               String base64 = s.next();
-
-               byte[] image = DatatypeConverter.parseBase64Binary(base64);
-               ByteArrayInputStream bis = new ByteArrayInputStream(image);
-               this.bufferedImage = ImageIO.read(bis);
-               bis.close();
-
-           } catch (FileNotFoundException e) {
-               System.out.println("File not found");
-           } catch (IOException e) {
-               System.out.println("RIP");
-           }
-       }
 
        /**
         * Method to read the contents of the picture from a filename

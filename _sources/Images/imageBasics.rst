@@ -46,10 +46,10 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
 .. raw:: html
 
-    <canvas id="arch" class="image"  width="180" height="240" style="display: block; margin: 0 auto;">
+    <canvas id="arch.jpg" class="image"  width="180" height="240" style="display: block; margin: 0 auto;">
     </canvas>
     <script>
-    var context = document.getElementById("arch").getContext("2d");
+    var context = document.getElementById("arch.jpg").getContext("2d");
     var img = new Image();
     img.onload = function () {
         context.drawImage(img, 0, 0);
@@ -907,40 +907,15 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
            File file = new File(this.fileName);
 
-           if(!file.exists()) {
-               this.createImageFromText(fileName.substring(0,fileName.lastIndexOf('.')) + ".txt");
-           } else {
-               if (!file.canRead())
-               {
-                 throw new IOException(this.fileName +
-                                     " could not be opened. Check that you specified the path");
-               }
-               this.bufferedImage = ImageIO.read(file);
+
+           if (!file.canRead())
+           {
+             throw new IOException(this.fileName +
+                                 " could not be opened. Check that you specified the path");
            }
+           this.bufferedImage = ImageIO.read(file);
 
-         }
 
-        /**
-         * Creates a image file from a text file
-         * @param  String name of text file
-         */
-         public void createImageFromText(String name) {
-
-             try {
-                 File file = new File(name);
-                 Scanner s = new Scanner(file);
-                 String base64 = s.next();
-
-                 byte[] image = DatatypeConverter.parseBase64Binary(base64);
-                 ByteArrayInputStream bis = new ByteArrayInputStream(image);
-                 this.bufferedImage = ImageIO.read(bis);
-                 bis.close();
-
-             } catch (FileNotFoundException e) {
-                 System.out.println("File not found");
-             } catch (IOException e) {
-                 System.out.println("RIP");
-             }
          }
 
          /**
@@ -1212,7 +1187,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
 .. activecode:: Picture
     :language: java
-    :datafile: filesIWant, SimplePicture.java, arch, MathFunctions.java
+    :datafile: filesIWant, SimplePicture.java, arch.jpg, MathFunctions.java
 
     import java.awt.*;
     import java.awt.font.*;
