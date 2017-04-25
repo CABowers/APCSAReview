@@ -279,6 +279,14 @@ Turtles (Beta)
 
   Turtles/turtleBasics.rst
 
+
+Unit Tests (Alpha)
+::::::::::::::::::::::::::::::
+.. toctree::
+  :maxdepth: 2
+
+  UnitTests/adding.rst
+
 Preparing for the Exam
 :::::::::::::::::::::::::::::::::
 

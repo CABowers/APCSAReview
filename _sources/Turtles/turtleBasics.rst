@@ -1404,7 +1404,7 @@ Try clicking the |runbutton| button below to see what the following program does
 
        }
 
-
+     
        /**
         * Method to read the contents of the picture from a filename
         * without throwing errors

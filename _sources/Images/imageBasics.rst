@@ -59,23 +59,11 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
     </script>
 
 
-.. datafile:: MathFunctions.java
-   :hide:
-
-   public class MathFunctions {
-       public static boolean greaterThan(int x, int y) {
-           return x > y;
-       }
-   }
-
-
 .. reveal:: JavaClasses
    :showtitle: Show Image Classes
    :hidetitle: Hide
 
-   .. raw:: html
-
-      <pre class="javaFiles" id="filesIWant">
+   .. datafile:: DigitalPicture.java
 
         import java.awt.Image;
         import java.awt.image.BufferedImage;
@@ -109,6 +97,9 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
           public void show(); // show the picture
           public boolean write(String fileName); // write out a file
         }
+
+
+   .. datafile:: Pixel.java
 
         import java.awt.Color;
 
@@ -477,16 +468,10 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
           }
 
         }
-    </pre>
 
 
-.. reveal:: JavaClasses
-   :showtitle: Show Simple Picture
-   :hidetitle: Hide
+   .. datafile:: SimplePicture.java
 
-   .. raw:: html
-
-      <pre id="SimplePicture.java">
         import javax.imageio.ImageIO;
         import java.awt.image.BufferedImage;
         import javax.swing.ImageIcon;
@@ -893,7 +878,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
            if (posDot >= 0)
              this.extension = fileName.substring(posDot + 1);
 
-            //get file location
+            // get file location
             String[] paths = fileName.split("/");
             this.pathName = "";
             if(paths.length != 1) {
@@ -1183,11 +1168,11 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
          }
 
         } // end of SimplePicture class
-    </pre>
+
 
 .. activecode:: Picture
     :language: java
-    :datafile: filesIWant, SimplePicture.java, arch.jpg, MathFunctions.java
+    :datafile: DigitalPicture.java, Pixel.java, SimplePicture.java, arch.jpg
 
     import java.awt.*;
     import java.awt.font.*;
@@ -1472,7 +1457,6 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
        */
       public static void main(String[] args)
       {
-        System.out.println(MathFunctions.greaterThan(3,2));
         Picture arch = new Picture("arch.jpg");
         arch.show();
         arch.switchColors();
