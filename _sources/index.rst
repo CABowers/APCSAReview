@@ -161,6 +161,10 @@ Arrays
    ArrayBasics/numberCubeB.rst
    ArrayBasics/aSummary.rst
    ArrayBasics/ArrayPractice.rst
+<<<<<<< HEAD
+=======
+   ArrayBasics/ArrayParsonsPractice.rst
+>>>>>>> upstream/master
 
 List and ArrayList
 ::::::::::::::::::::
@@ -171,9 +175,13 @@ List and ArrayList
    ListBasics/listbasics.rst
    ListBasics/listInterface.rst
    ListBasics/listArrayList.rst
+   ListBasics/listDeclareAndCreate.rst
+   ListBasics/listAdd.rst
+   ListBasics/listMethods.rst
    ListBasics/listLoop.rst
+   ListBasics/listVsArray.rst
    ListBasics/listMistakes.rst
-   ListBasics/listPractice.rst
+   ListBasics/lPractice.rst
    ListBasics/listEasyMC.rst
    ListBasics/listMedMC.rst
    ListBasics/listHardMC.rst
@@ -185,6 +193,9 @@ List and ArrayList
    ListBasics/cookieOrderB.rst
    ListBasics/2016freeresponseQ4A.rst
    ListBasics/2016freeresponseQ4B.rst
+   ListBasics/listSummary.rst
+   ListBasics/listPractice.rst
+   ListBasics/ListParsonsPractice.rst
 
 Two-dimensional Arrays
 :::::::::::::::::::::::
@@ -205,6 +216,7 @@ Two-dimensional Arrays
    Array2dBasics/grayImageB.rst
    Array2dBasics/routeCipherA.rst
    Array2dBasics/routeCipherB.rst
+   Array2dBasics/Array2dParsonsPractice.rst
 
 Object-Oriented Concepts
 ::::::::::::::::::::::::
@@ -264,6 +276,7 @@ Searching and Sorting
    SearchSort/insertionSort.rst
    SearchSort/mergeSort.rst
    SearchSort/ssEasyMC.rst
+   SearchSort/ssMedMC.rst
 
 Images (Beta)
 ::::::::::::::::::::::::::::::
